@@ -11,18 +11,16 @@ const model = require('./models.js');
 // const Entry = Models.Entry;
 const Users = model.User;
 
-/*
-mongoose.connect(process.env.CONNECTION_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-*/
+mongoose.connect( process.env.CONNECTION_URI, {
+   useNewUrlParser: true,
+   useUnifiedTopology: true 
+  });
 
 // local connection
-mongoose.connect('mongodb://localhost:27017/practicingNatureDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongoose.connect('mongodb://localhost:27017/practicingNatureDB', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'log.txt'), {
   flags: 'a',
