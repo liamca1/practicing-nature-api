@@ -43,10 +43,6 @@ const auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
 
-app.get('/', (req, res) => {
-  res.send('Welcome to Practicing Nature API');
-});
-
 /**** ENDPOINTS ****/
 
 // READ: Get a user by username.
@@ -211,6 +207,10 @@ app.delete(
       });
   }
 );
+
+app.get('/', (req, res) => {
+  res.send('Welcome to Practicing Nature API');
+});
 
 app.use(express.static('public'));
 
