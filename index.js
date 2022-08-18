@@ -1,8 +1,7 @@
 const express = require('express'),
   fs = require('fs'),
   path = require('path'),
-  bodyParser = require('body-parser'),
-  uuid = require('uuid');
+  bodyParser = require('body-parser')
 
 const morgan = require('morgan');
 const app = express();
